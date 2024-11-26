@@ -9,6 +9,11 @@ create .env file
 cp .env.example .env
 ```
 
+```bash
+    yarn install
+    yarn dev
+```
+
 This document provides an overview of the project structure, including the purpose of each folder and its contents.
 
 ## **Folder Structure**
