@@ -63,7 +63,7 @@ export default function Register() {
 
       if (response.status === 201) {
         toast.success('Registration successful, please log in!');
-        navigate('/'); // Redirect to login page
+        navigate('/');
       }
     } catch (err) {
         toast.error(err.response?.data?.message || 'Registration failed.');

@@ -9,10 +9,8 @@ const axiosConfig: { headers: { "Content-Type": string }; baseURL: string } = {
 
 const axiosInstance: AxiosInstance = axios.create(axiosConfig as CreateAxiosDefaults);
 
-// Add interceptors to handle token injection, errors, etc.
 axiosInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
-    // Optionally inject token into headers
     const token = localStorage.getItem('jwtToken');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;

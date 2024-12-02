@@ -46,7 +46,7 @@ export default function Login() {
 
         login(access_token)
         toast.success('Login successful!');
-        navigate('/phishing-simulation'); // Redirect to the dashboard or protected route
+        navigate('/phishing-simulation');
       }
     } catch (err: any) {
       toast.error(err.response?.data?.message || 'Login failed.');

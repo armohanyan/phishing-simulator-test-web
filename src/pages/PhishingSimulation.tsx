@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import axiosInstance from '../utils/axiosInstance'; // Import your configured Axios instance
+import axiosInstance from '../utils/axiosInstance';
 import {toast} from 'react-toastify';
 import Input from "../components/ui/Input";
-import Button from "../components/ui/Button"; // For notifications
+import Button from "../components/ui/Button";
 
 export default function PhishingSimulation() {
   const [phishingAttempts, setPhishingAttempts] = useState([]);
@@ -20,12 +20,10 @@ export default function PhishingSimulation() {
     }
   };
 
-  // Fetch phishing attempts on component mount
   useEffect(() => {
     fetchPhishingAttempts();
   }, []);
 
-  // Handle form submission
   const handleSimulate = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -38,7 +36,7 @@ export default function PhishingSimulation() {
       setLoading(true);
       const {data} = await axiosInstance.post('/phishing/send', {email});
       toast.success('Phishing attempt triggered successfully');
-      setPhishingAttempts((prev) => [...prev, data]); // Add new attempt to the table
+      setPhishingAttempts((prev) => [...prev, data]);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Failed to simulate phishing attempt');
     } finally {
