@@ -69,19 +69,17 @@ export default function Login() {
             <Input
               id="email"
               name="email"
-              label="email"
+              label="Email"
               type="email"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
           <div className="mb-4">
             <Input
               id="password"
-              label="password"
+              label="Password"
               name="password"
               type="password"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>

@@ -85,7 +85,7 @@ export default function Register() {
             <Input
                 id="fullName"
                 name="fullName"
-                label="full name"
+                label="Full Name"
                 type="text"
                 required
             />
@@ -94,7 +94,7 @@ export default function Register() {
             <Input
                 id="email"
                 name="email"
-                label="email"
+                label="Email"
                 type="email"
                 required
             />
@@ -102,7 +102,7 @@ export default function Register() {
           <div className="mb-4">
             <Input
                 id="password"
-                label="password"
+                label="Password"
                 name="password"
                 type="password"
                 required
