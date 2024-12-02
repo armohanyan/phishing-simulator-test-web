@@ -113,7 +113,7 @@ export default function Register() {
                 id="confirmPassword"
                 label="Confirm Password"
                 name="confirmPassword"
-                type="confirmPassword"
+                type="password"
                 required
             />
           </div>
